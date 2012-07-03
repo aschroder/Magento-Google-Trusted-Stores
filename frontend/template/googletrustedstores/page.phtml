@@ -1,0 +1,36 @@
+<?php 
+
+/**
+
+From:
+https://support.google.com/trustedstoresmerchant/bin/answer.py?hl=en&answer=2609894&ctx=go
+
+TODO: Add google base variables for product pages.
+
+*/
+
+?>
+
+<?php 
+if (!Mage::helper('googletrustedstores')->isEnabled()) {
+	return;
+}
+?>
+
+<!-- BEGIN: Google Trusted Store -->
+<script type="text/javascript">
+  var gts = gts || [];
+
+  gts.push(["id", <?php echo Mage::helper('googletrustedstores')->getGoogleId(); ?>]);
+
+  (function() {
+    var scheme = (("https:" == document.location.protocol) ? "https://" : "http://");
+    var gts = document.createElement("script");
+    gts.type = "text/javascript";
+    gts.async = true;
+    gts.src = scheme + "www.googlecommerce.com/trustedstores/gtmp_compiled.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(gts, s);
+  })();
+</script>
+<!-- END: Google Trusted Store -->

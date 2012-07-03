@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<layout version="1.0.0">
+
+	<default>
+		<reference name="footer">
+			<block type="core/template" name="every.page.googletrustedstores" as="every.page.googletrustedstores"
+				template="googletrustedstores/page.phtml" />
+		</reference>
+	</default>
+	
+	<checkout_onepage_success translate="label">
+		<reference name="content">
+			<block type="checkout/onepage_success" name="checkout.success.googletrustedstores" as="checkout.success.googletrustedstores"
+				template="googletrustedstores/orderconfirmation.phtml" />
+		</reference>
+	</checkout_onepage_success>
+
+	<!-- 
+	TODO: checkout_multishipping_success - if anybody actually uses it... 
+	 -->
+
+</layout>
+    
+    

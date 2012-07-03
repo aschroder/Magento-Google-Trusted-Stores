@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+	/**
+	* @package    Aschroder_GoogleTrustedStore
+	* @author     Ashley Schroder (aschroder.com)
+	*/
+-->
+<config>
+	<modules>
+		<Aschroder_GoogleTrustedStore>
+			<version>0.1</version>
+		</Aschroder_GoogleTrustedStore>
+	</modules>
+	<global>
+		<helpers>
+			<googletrustedstores><class>Aschroder_GoogleTrustedStore_Helper</class></googletrustedstores>
+		</helpers>
+		<models>
+            <googletrustedstores>
+                <class>Aschroder_GoogleTrustedStore_Model</class>
+            </googletrustedstores>
+        </models>
+	</global>
+	
+	<frontend>
+		<routers>
+			<googletrustedstores>
+				<use>standard</use>
+				<args>
+					<module>Aschroder_GoogleTrustedStore</module>
+					<frontName>googletrustedstores</frontName>
+				</args>
+			</googletrustedstores>
+		 </routers>
+        <layout>
+            <updates>
+                <googletrustedstores>
+                    <file>googletrustedstores.xml</file>
+                </googletrustedstores>
+            </updates>
+        </layout>
+	</frontend>
+	
+</config>
