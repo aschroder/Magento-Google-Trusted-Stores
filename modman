@@ -1,0 +1,9 @@
+# modman module description
+# see https://github.com/colinmollenhour/modman/ for more info
+# author: Ashley
+
+#Google trusted stores
+*	app/code/community/Aschroder/GoogleTrustedStore
+modules/Aschroder_GoogleTrustedStore.xml	app/etc/modules/Aschroder_GoogleTrustedStore.xml
+frontend/template/googletrustedstores	app/design/frontend/base/default/template/googletrustedstores
+frontend/layout/googletrustedstores.xml	app/design/frontend/base/default/layout/googletrustedstores.xml
