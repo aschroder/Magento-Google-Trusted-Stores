@@ -1,0 +1,23 @@
+Magento Google Trusted Stores Extension
+by Ashley Schroder (aschroder.com)
+
+- Stability: Development
+- Free and Opensource
+- Add the required javascript to your store
+- publish teh required feeds for shipments and cancellations
+
+How to use:
+
+a) The javascript should be injected automatically on all pages, and the success page. But if you have ever, ever installed an extension that includes template changes successfully, I'd like to hear about it. 
+
+Chances are you'll need to fiddle around with the template code in: frontend/template/googletrustedstores/*phtml
+
+b) The feeds will be available for Google to fetch daily at:
+yourstore.com/googletrustedstores/feed/shipments?key=12345
+yourstore.com/googletrustedstores/feed/cancellations?key=12345
+
+Please for the love of god, set a key, and don't use 12345.
+
+Note: Very unstable, actively under development. All bets are off, contact me with questions, issues etc.
+
+
