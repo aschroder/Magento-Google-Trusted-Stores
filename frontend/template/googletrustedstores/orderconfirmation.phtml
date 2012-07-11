@@ -52,11 +52,15 @@ https://support.google.com/trustedstoresmerchant/bin/answer.py?hl=en&answer=2609
   
 
 	<?php foreach ($order->getAllItems() as $item): ?>
-	<span class="gts-item">
-		<span class="gts-i-name"><?php echo htmlentities($item->getName()); ?></span>
-		<span class="gts-i-price"><?php echo $item->getBasePrice(); ?></span>
-		<span class="gts-i-quantity"><?php echo (int)$item->getQtyOrdered(); ?></span>
-	</span>
+
+		<?php  if($item->getParentItemId()) continue; // skip child items ?>
+	
+		<span class="gts-item">
+			<span class="gts-i-name"><?php echo htmlentities($item->getName()); ?></span>
+			<span class="gts-i-price"><?php echo $item->getBasePrice(); ?></span>
+			<span class="gts-i-quantity"><?php echo (int)$item->getQtyOrdered(); ?></span>
+		</span>
+		
 	<?php endforeach; ?>
 
 </div>
