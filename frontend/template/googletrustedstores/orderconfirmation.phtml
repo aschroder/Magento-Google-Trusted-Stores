@@ -20,7 +20,7 @@ https://support.google.com/trustedstoresmerchant/bin/answer.py?hl=en&answer=2609
 
     $orderId = $this->getOrderId();
     $order = Mage::getModel('sales/order')->loadByIncrementId($orderId);
-    $customer = Mage::getModel('customer/customer')->load($order->getCustomerId());
+    $email = $order->getCustomerEmail();
     $address = $order->getBillingAddress();
     $backorder = false;
     $download = false;
@@ -39,7 +39,7 @@ https://support.google.com/trustedstoresmerchant/bin/answer.py?hl=en&answer=2609
   	<!-- start order and merchant information -->
 	<span id="gts-o-id"><?php echo $orderId; ?></span>
 	<span id="gts-o-domain"><?php echo $host; ?></span>
-	<span id="gts-o-email"><?php echo htmlentities($customer->getEmail()); ?></span>
+	<span id="gts-o-email"><?php echo htmlentities($email); ?></span>
 	<span id="gts-o-country"><?php echo htmlentities($address->getCountryId()); ?></span>
 	<span id="gts-o-currency">USD</span> <!-- USD only at the moment -->
 	<span id="gts-o-total"><?php echo $order->getGrandTotal(); ?></span>
